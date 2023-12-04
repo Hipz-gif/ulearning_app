@@ -41,7 +41,11 @@ dependencies:
   intl:
   cloud_firestore:
   firebase_auth: ^4.15.0
-  firebase_core:
+  firebase_core: ^2.24.0
+  fluttertoast: ^8.2.4
+  firebase_app_check: ^0.2.1+6
+  google_sign_in: ^6.1.6
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

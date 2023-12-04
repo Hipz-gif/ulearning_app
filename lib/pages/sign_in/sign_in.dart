@@ -5,7 +5,7 @@ import 'package:ulearning_app/pages/sign_in/bloc/sign_in_bloc.dart';
 import 'package:ulearning_app/pages/sign_in/bloc/sign_in_events.dart';
 import 'package:ulearning_app/pages/sign_in/bloc/sign_in_states.dart';
 import 'package:ulearning_app/pages/sign_in/sign_in_controller.dart';
-import 'package:ulearning_app/pages/sign_in/widgets/sign_in_widget.dart';
+import 'package:ulearning_app/pages/common_widgets.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -22,7 +22,7 @@ class _SignInState extends State<SignIn> {
         color: Colors.white,
         child: SafeArea(
             child: Scaffold(
-          appBar: buildAppBar(),
+          appBar: buildAppBar('Log In'),
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,7 +57,9 @@ class _SignInState extends State<SignIn> {
                       buildLogInAdnRegButton('Log In', 'login', () {
                         SignInController(context: context).handleSignIn('email');
                       }),
-                      buildLogInAdnRegButton('Register', 'register', () {}),
+                      buildLogInAdnRegButton('Sign Up', 'register', () {
+                        Navigator.of(context).pushNamed('/register');
+                      }),
                     ],
                   ),
                 )
